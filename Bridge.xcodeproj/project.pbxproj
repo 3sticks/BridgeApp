@@ -12,6 +12,7 @@
 		9A824BC925460D0700E639DC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A824BC825460D0700E639DC /* LogInViewController.swift */; };
 		9AE8660C2547AD5F00BA57C6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */; };
 		9AE8660E2547B15600BA57C6 /* FinalViewForNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */; };
+		9AE866142549013000BA57C6 /* sendEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE866132549013000BA57C6 /* sendEmail.swift */; };
 		9AF68F4A24B920400068857F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F4924B920400068857F /* AppDelegate.swift */; };
 		9AF68F4C24B920400068857F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F4B24B920400068857F /* SceneDelegate.swift */; };
 		9AF68F4E24B920400068857F /* LandingPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F4D24B920400068857F /* LandingPageMainViewController.swift */; };
@@ -43,6 +44,7 @@
 		9A824BC825460D0700E639DC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewForNowViewController.swift; sourceTree = "<group>"; };
+		9AE866132549013000BA57C6 /* sendEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendEmail.swift; sourceTree = "<group>"; };
 		9AF68F4624B920400068857F /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF68F4924B920400068857F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF68F4B24B920400068857F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				9A824BC825460D0700E639DC /* LogInViewController.swift */,
 				9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */,
 				9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */,
+				9AE866132549013000BA57C6 /* sendEmail.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				9A824BC925460D0700E639DC /* LogInViewController.swift in Sources */,
 				9AF68F4C24B920400068857F /* SceneDelegate.swift in Sources */,
 				9AE8660E2547B15600BA57C6 /* FinalViewForNowViewController.swift in Sources */,
+				9AE866142549013000BA57C6 /* sendEmail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

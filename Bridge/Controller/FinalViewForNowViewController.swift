@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class FinalViewForNowViewController: UIViewController {
 
@@ -15,9 +17,7 @@ class FinalViewForNowViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -25,6 +25,6 @@ class FinalViewForNowViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

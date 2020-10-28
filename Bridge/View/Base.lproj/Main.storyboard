@@ -215,6 +215,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="35Q-R9-abP" eventType="touchUpInside" id="1pL-JI-et0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -234,6 +237,11 @@
                         <viewLayoutGuide key="safeArea" id="LkU-FG-slz"/>
                     </view>
                     <navigationItem key="navigationItem" id="nU5-u9-gFz"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="cmR-hL-Prz" id="FZ5-3M-jRI"/>
+                        <outlet property="passwordTextField" destination="mR0-VU-hEx" id="6Ah-E5-8hd"/>
+                        <segue destination="Rsv-WH-JDl" kind="show" identifier="loginComplete" id="wO0-d6-WLG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdm-4t-GVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -288,6 +296,9 @@
             <point key="canvasLocation" x="-620.28985507246387" y="101.78571428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wO0-d6-WLG"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="640" height="394.66665649414062"/>
         <namedColor name="BrandGrayBlack">
