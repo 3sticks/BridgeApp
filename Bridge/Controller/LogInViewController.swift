@@ -47,7 +47,7 @@ class LogInViewController: UIViewController {
               //put red text inside text field saying invalid text field
           } else {
               //Navigated to chat view controller
-              self.performSegue(withIdentifier: "loginComplete", sender: self)
+            self.performSegue(withIdentifier: K.loginPressed, sender: self)
               
               
               }
@@ -60,3 +60,23 @@ class LogInViewController: UIViewController {
 
     }
 }
+
+
+//FIRAuth.auth()?.signInWithEmail(txtUsername.text!, password: txtPassword.text!) {
+//       (user, error) in
+//       if let user = FIRAuth.auth()?.currentUser {
+//           if !user.emailVerified{
+//               let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(self.txtUsername.text).", preferredStyle: .Alert)
+//               let alertActionOkay = UIAlertAction(title: "Okay", style: .Default) {
+//                   (_) in
+//                       user.sendEmailVerificationWithCompletion(nil)
+//               }
+//               let alertActionCancel = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
+//
+//               alertVC.addAction(alertActionOkay)
+//               alertVC.addAction(alertActionCancel)
+//               self.presentViewController(alertVC, animated: true, completion: nil)
+//           } else {
+//               print ("Email verified. Signing in...")
+//           }
+//       }

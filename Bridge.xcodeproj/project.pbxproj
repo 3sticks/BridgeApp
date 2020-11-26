@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		2CFC34699B28EAA948EC1C1F /* Pods_Bridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98FD8D8864DAB472B91D688F /* Pods_Bridge.framework */; };
 		9A04219E2547A7C700E6D37C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A04219D2547A7C700E6D37C /* GoogleService-Info.plist */; };
+		9A1F6B0C254A4B0700AE2088 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F6B0B254A4B0700AE2088 /* K.swift */; };
+		9A1F6B0E254AE86900AE2088 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F6B0D254AE86900AE2088 /* Post.swift */; };
 		9A824BC925460D0700E639DC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A824BC825460D0700E639DC /* LogInViewController.swift */; };
 		9AE8660C2547AD5F00BA57C6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */; };
 		9AE8660E2547B15600BA57C6 /* FinalViewForNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */; };
-		9AE866142549013000BA57C6 /* sendEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE866132549013000BA57C6 /* sendEmail.swift */; };
+		9AE866142549013000BA57C6 /* SendEmailVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE866132549013000BA57C6 /* SendEmailVer.swift */; };
 		9AF68F4A24B920400068857F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F4924B920400068857F /* AppDelegate.swift */; };
 		9AF68F4C24B920400068857F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F4B24B920400068857F /* SceneDelegate.swift */; };
 		9AF68F4E24B920400068857F /* LandingPageMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F4D24B920400068857F /* LandingPageMainViewController.swift */; };
@@ -20,6 +22,8 @@
 		9AF68F5324B920420068857F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF68F5224B920420068857F /* Assets.xcassets */; };
 		9AF68F5624B920420068857F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF68F5424B920420068857F /* LaunchScreen.storyboard */; };
 		9AF68F6124B920420068857F /* BridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF68F6024B920420068857F /* BridgeTests.swift */; };
+		9AF8C04A2569967C0034FA0F /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF8C0482569967C0034FA0F /* MessageCell.swift */; };
+		9AF8C04B2569967C0034FA0F /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9AF8C0492569967C0034FA0F /* MessageCell.xib */; };
 		E10B780322733C3BCA077828 /* Pods_BridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89B86809DB26B1AE63D88857 /* Pods_BridgeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +45,12 @@
 		89B86809DB26B1AE63D88857 /* Pods_BridgeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BridgeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98FD8D8864DAB472B91D688F /* Pods_Bridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A04219D2547A7C700E6D37C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A1F6B0B254A4B0700AE2088 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		9A1F6B0D254AE86900AE2088 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9A824BC825460D0700E639DC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewForNowViewController.swift; sourceTree = "<group>"; };
-		9AE866132549013000BA57C6 /* sendEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendEmail.swift; sourceTree = "<group>"; };
+		9AE866132549013000BA57C6 /* SendEmailVer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailVer.swift; sourceTree = "<group>"; };
 		9AF68F4624B920400068857F /* Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF68F4924B920400068857F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF68F4B24B920400068857F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +62,8 @@
 		9AF68F5C24B920420068857F /* BridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF68F6024B920420068857F /* BridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BridgeTests.swift; sourceTree = "<group>"; };
 		9AF68F6224B920420068857F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AF8C0482569967C0034FA0F /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		9AF8C0492569967C0034FA0F /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +100,7 @@
 		9A824BC325460AAC00E639DC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9A1F6B0D254AE86900AE2088 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				9AF68F4F24B920400068857F /* Main.storyboard */,
+				9AF8C0482569967C0034FA0F /* MessageCell.swift */,
+				9AF8C0492569967C0034FA0F /* MessageCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,7 +122,6 @@
 				9A824BC825460D0700E639DC /* LogInViewController.swift */,
 				9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */,
 				9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */,
-				9AE866132549013000BA57C6 /* sendEmail.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -139,6 +149,8 @@
 		9AF68F4824B920400068857F /* Bridge */ = {
 			isa = PBXGroup;
 			children = (
+				9A1F6B0B254A4B0700AE2088 /* K.swift */,
+				9AE866132549013000BA57C6 /* SendEmailVer.swift */,
 				9A04219D2547A7C700E6D37C /* GoogleService-Info.plist */,
 				9A824BC525460AC600E639DC /* Controller */,
 				9A824BC425460ABD00E639DC /* View */,
@@ -254,6 +266,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AF8C04B2569967C0034FA0F /* MessageCell.xib in Resources */,
 				9AF68F5624B920420068857F /* LaunchScreen.storyboard in Resources */,
 				9A04219E2547A7C700E6D37C /* GoogleService-Info.plist in Resources */,
 				9AF68F5324B920420068857F /* Assets.xcassets in Resources */,
@@ -340,12 +353,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF68F4E24B920400068857F /* LandingPageMainViewController.swift in Sources */,
+				9AF8C04A2569967C0034FA0F /* MessageCell.swift in Sources */,
 				9AE8660C2547AD5F00BA57C6 /* RegisterViewController.swift in Sources */,
 				9AF68F4A24B920400068857F /* AppDelegate.swift in Sources */,
 				9A824BC925460D0700E639DC /* LogInViewController.swift in Sources */,
 				9AF68F4C24B920400068857F /* SceneDelegate.swift in Sources */,
 				9AE8660E2547B15600BA57C6 /* FinalViewForNowViewController.swift in Sources */,
-				9AE866142549013000BA57C6 /* sendEmail.swift in Sources */,
+				9A1F6B0E254AE86900AE2088 /* Post.swift in Sources */,
+				9AE866142549013000BA57C6 /* SendEmailVer.swift in Sources */,
+				9A1F6B0C254A4B0700AE2088 /* K.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
