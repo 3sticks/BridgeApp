@@ -38,26 +38,85 @@ class RegisterViewController: UIViewController {
             passwordTextField.attributedPlaceholder = NSAttributedString(string: "Please enter a valid password!", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
             
             //TODO I dont like the red staying there.......... or the new text.... figure that out
-        }
-        
-        //if email text is not nil, and password is not nil, then info can be passed to firebase
-        //optional chaining
-        if let email = emailTextField.text, let password = passwordTextField.text {//get password
-        
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-            if let e = error {
-                print(e.localizedDescription)//localized description goes to user
-                //TODO give the user a popup on the app telling them to plug their shit in and not be a dumb fuck
-                //put red text inside text field saying invalid text field
-            } else {
-                //Navigated to chat view controller
-                self.performSegue(withIdentifier: K.registerPressed, sender: self)
-                
-                SendEmailVer.sendVerificationEmail()
-                
-                }
-            }
             
+        //own database!
+            
+        //f text is entered
+        } else {
+            
+        //url prep
+        //create new user in Mysql
+        let url = URL(string: "https://mybridgeapp.com/register.php")!//EXCLAMATION POINT OPTIONAL
+            //so this accesses the register php url. i might TODO this and possobly change the domaiN
+            // url to php file
+            // request to this file
+            var request = URLRequest(url: url)
+            // method to pass data to this file (e.g. via POST)
+            request.httpMethod = "POST"
+            //this body variable is like entering http://mybridgeapp.com/register.php?username=1&password=3&email=3&fullname=3
+            //into the url bar
+            
+            // body to be appended to url
+            //remember the optionals!
+            let body =  "username=\(userNameTextField.text!.lowercased())&password=\(passwordTextField.text!)&email=\(emailTextField.text!)&fullname=\(nameTextField.text!)"
+            //so i am just giving the user 1 field to enter their name. should i do two like Ahkmed? I dont think its necessary, but if i did, this is how to combine them. %20 is a space
+            //fullname=\(firstnameTxt.text!)%20\(lastnameTxt.text!)"
+            
+            //append the body to the request (url)
+            request.httpBody = body.data(using: .utf8)
+            
+            
+            
+            
+            //proceed with request
+            // proceed request
+             URLSession.shared.dataTask(with: request) { data, response, error in
+                 
+                //check for error
+                //no error
+                 if error == nil {
+                //send request
+                     
+                    // get main queue in code process to communicate back to user interface
+                     DispatchQueue.main.async(execute: {
+                         
+                         do {
+                             // get json result
+                             let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary //data is in a dictionary form -- you know what that means
+                             
+                             // assign json to new var parseJSON in guard/secured way
+                             guard let parseJSON = json else { ///guard is a safety method  if parse is not equal to json, break and present error
+                                 print("Error while parsing")
+                                 return
+                             }
+                             
+                             // get id from parseJSON dictionary
+                             let id = parseJSON["id"]//(id from dictionary) is this the best way to do this?
+                             
+                             // successfully registered
+                             if id != nil {
+                                
+                                print(parseJSON)
+                                 
+                             // if unable to process request
+                             }
+                            
+                         } catch {
+                                
+                                print("Caught an error \(error)")
+
+                            }
+                    })
+                    
+                 }else {
+                    
+                    print(error)
+                }
+                                 
+                            
+                             }.resume()
+                  }
         }
     }
-}
+
+//need to send it to next screen lol 

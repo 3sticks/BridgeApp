@@ -20,6 +20,7 @@ class LandingPageMainViewController: UIViewController {
         //check default user name 
     }
 
+    //no code for buttons because they are ctrl clicked drag
 
 //    @IBAction func logInButton(_ sender: UIButton) {
 //

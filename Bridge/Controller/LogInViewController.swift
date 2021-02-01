@@ -12,7 +12,7 @@ import Firebase
 class LogInViewController: UIViewController {
 
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var userNameTextField: UITextField!// do username or username?
     @IBOutlet weak var passwordTextField: UITextField!
     
 
@@ -21,62 +21,82 @@ class LogInViewController: UIViewController {
 //
 //        // Do any additional setup after loading the view.
 //    }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
-    if let email = emailTextField.text, let password = passwordTextField.text {//get password
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-          //guard let strongSelf = self else { return }
+        if userNameTextField.text!.isEmpty || passwordTextField.text!.isEmpty{
             
-          if let e = error {
-              print(e.localizedDescription)//localized description goes to user
-            //TODO create SWITCH that checks for error and present something nicer in an erorr message. 
-              //TODO give the user a popup on the app telling them to plug their shit in and not be a dumb fuck
-              //put red text inside text field saying invalid text field
-          } else {
-              //Navigated to chat view controller
-            self.performSegue(withIdentifier: K.loginPressed, sender: self)
-              
-              
-              }
-         
-        
+            //username
+            userNameTextField.attributedPlaceholder = NSAttributedString(string: "Please enter a username!", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            //name
+            passwordTextField.attributedPlaceholder = NSAttributedString(string: "Did you forget your password?", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
+            
+            
         }
         
-        
-        }
+        else{
+            
+            let username = userNameTextField.text!.lowercased()
+            let password = passwordTextField.text!
+            
+            //send mysql request
+            let url = URL(string: "https://mybridgeapp.com/login.php")! //path to login file
+            var request = URLRequest(url: url)
+            
+            request.httpMethod = "POST"
+            
+            let body = "username=\(username)&password=\(password)"
+            
+            
+            request.httpBody = body.data(using: .utf8)
+                    
+                    // launch session
+                    URLSession.shared.dataTask(with: request) { data, response, error in
+                        
+                        //check for error
+                        //no error
+                         if error == nil {
+                        //send request
+                             
+                            // get main queue in code process to communicate back to user interface
+                             DispatchQueue.main.async(execute: {
+                                 
+                                 do {
+                                     // get json result
+                                     let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? NSDictionary //data is in a dictionary form -- you know what that means
+                                     
+                                     // assign json to new var parseJSON in guard/secured way
+                                     guard let parseJSON = json else { ///guard is a safety method  if parse is not equal to json, break and present error
+                                         print("Error while parsing")
+                                         return
+                                     }
+                                     
+                                     // get id from parseJSON dictionary
+                                     let id = parseJSON["id"]//(id from dictionary) is this the best way to do this?
+                                     
+                                     // successfully logged in
+                                     if id != nil {
+                                        
+                                        print(parseJSON)
+                                         
+                                     // if unable to process request
+                                    } 
+                                    
+                                 } catch {
+                                        
+                                        print("Caught an error \(error)")
 
+                                    }
+                            })
+                            
+                         }else {
+                            
+                            print(error)
+                        }}.resume()
+            }
+
+        }
+    
     }
-}
 
-
-//FIRAuth.auth()?.signInWithEmail(txtUsername.text!, password: txtPassword.text!) {
-//       (user, error) in
-//       if let user = FIRAuth.auth()?.currentUser {
-//           if !user.emailVerified{
-//               let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(self.txtUsername.text).", preferredStyle: .Alert)
-//               let alertActionOkay = UIAlertAction(title: "Okay", style: .Default) {
-//                   (_) in
-//                       user.sendEmailVerificationWithCompletion(nil)
-//               }
-//               let alertActionCancel = UIAlertAction(title: "Cancel", style: .Default, handler: nil)
-//
-//               alertVC.addAction(alertActionOkay)
-//               alertVC.addAction(alertActionCancel)
-//               self.presentViewController(alertVC, animated: true, completion: nil)
-//           } else {
-//               print ("Email verified. Signing in...")
-//           }
-//       }

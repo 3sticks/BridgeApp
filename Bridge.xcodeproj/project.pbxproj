@@ -12,6 +12,7 @@
 		9A1F6B0C254A4B0700AE2088 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F6B0B254A4B0700AE2088 /* K.swift */; };
 		9A1F6B0E254AE86900AE2088 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F6B0D254AE86900AE2088 /* Post.swift */; };
 		9A824BC925460D0700E639DC /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A824BC825460D0700E639DC /* LogInViewController.swift */; };
+		9AD008A3259BA2A50014BCFA /* ResetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AD008A2259BA2A50014BCFA /* ResetPWViewController.swift */; };
 		9AE8660C2547AD5F00BA57C6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */; };
 		9AE8660E2547B15600BA57C6 /* FinalViewForNowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */; };
 		9AE866142549013000BA57C6 /* SendEmailVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE866132549013000BA57C6 /* SendEmailVer.swift */; };
@@ -48,6 +49,7 @@
 		9A1F6B0B254A4B0700AE2088 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		9A1F6B0D254AE86900AE2088 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9A824BC825460D0700E639DC /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9AD008A2259BA2A50014BCFA /* ResetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPWViewController.swift; sourceTree = "<group>"; };
 		9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewForNowViewController.swift; sourceTree = "<group>"; };
 		9AE866132549013000BA57C6 /* SendEmailVer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailVer.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				9A824BC825460D0700E639DC /* LogInViewController.swift */,
 				9AE8660B2547AD5F00BA57C6 /* RegisterViewController.swift */,
 				9AE8660D2547B15600BA57C6 /* FinalViewForNowViewController.swift */,
+				9AD008A2259BA2A50014BCFA /* ResetPWViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				9AE8660E2547B15600BA57C6 /* FinalViewForNowViewController.swift in Sources */,
 				9A1F6B0E254AE86900AE2088 /* Post.swift in Sources */,
 				9AE866142549013000BA57C6 /* SendEmailVer.swift in Sources */,
+				9AD008A3259BA2A50014BCFA /* ResetPWViewController.swift in Sources */,
 				9A1F6B0C254A4B0700AE2088 /* K.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

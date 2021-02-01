@@ -12,6 +12,10 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var window: UIWindow?
+    
+    //boolean check if errorview is currently showing
+    var errorViewIsShowing = false
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -37,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+    //error view on top
+    func errorView(message message:String){
+        
+        //if error view is not showing
+        if errorViewIsShowing { //not showing
+            errorViewIsShowing = true
+            let errorView_Height = self.window!.bounds.height / 14.2
+            let errorView_Y = 0 - errorView_Height
+            
+            let errorView = UIView(frame: CGRectMake)
+            
+        }
+    }
 
 }
 
