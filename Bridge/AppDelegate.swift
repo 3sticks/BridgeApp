@@ -41,20 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    
+    //FIXME what is this?
     //error view on top
-    func errorView(message message:String){
-        
-        //if error view is not showing
-        if errorViewIsShowing { //not showing
-            errorViewIsShowing = true
-            let errorView_Height = self.window!.bounds.height / 14.2
-            let errorView_Y = 0 - errorView_Height
-            
-            let errorView = UIView(frame: CGRectMake)
-            
-        }
-    }
+//    func errorView(message message:String){
+//
+//        //if error view is not showing
+//        if errorViewIsShowing { //not showing
+//            errorViewIsShowing = true
+//            let errorView_Height = self.window!.bounds.height / 14.2
+//            let errorView_Y = 0 - errorView_Height
+//
+//            let errorView = UIView(frame: CGRectMake)
+//
+//        }
+//    }
 
 }
 

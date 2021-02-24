@@ -8,6 +8,8 @@
 //constants file, easily callable by K.4
 //
 
+
+
 struct K {
  
     //for segues from login/register buttons
